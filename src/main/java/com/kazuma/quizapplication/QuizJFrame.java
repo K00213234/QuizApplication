@@ -122,16 +122,13 @@ public class QuizJFrame extends javax.swing.JFrame
     {
 	if (questionIndex < questionBank.length)
 	{
-
 	    questionJTextField.setText(questionBank[questionIndex]);
-
 	    selectAnswerComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(questionBankAnswers[questionIndex]));
-
 	    if (questionIndex == 4)
 	    {
 		String output = "<html>Thanks for Taking the quiz.<br />"
-			+ "Number of questions answered = " + (questionIndex + 1) + "<br/>"
-			+ "Number of Correct answers = " + correctAnswers + "</br>"
+			+ "Number of questions answered = " + (questionIndex + 1) + "<br />"
+			+ "Number of Correct answers = " + correctAnswers + "<br />"
 			+ "Number of Incorrect answers = " + wrongAnswers + "</html>";
 		JOptionPane.showMessageDialog(this, output);
 	    }
